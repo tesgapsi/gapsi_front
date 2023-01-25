@@ -1,0 +1,43 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Agregar Proveedor</h4>
+                      <p class="card-category"> Nuevo Proveedor</p>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="example-container">
+                      <form [formGroup]="providerForm" (ngSubmit)="saveProvider()">
+                        
+                        <mat-form-field appearance="fill" >
+                          <mat-label>Nombre</mat-label>
+                          <input matInput formControlName="name" placeholder="nombre">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" >
+                          <mat-label>Razon Social</mat-label>
+                          <input matInput formControlName="rs" placeholder="Razon Social">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" >
+                          <mat-label>Direccion</mat-label>
+                          <input matInput formControlName="direction" placeholder="direccion">
+                        </mat-form-field>
+
+                        <button mat-button [disabled]="providerForm.invalid" type="submit" color="warn">Crear</button>
+
+                        <button mat-button (click)=back($event) color="primary">regresar</button>
+
+                      </form>
+                    </div>
+
+                  </div>
+              </div>
+          
+          </div>
+      </div>
+  </div>
+</div>
